@@ -1,0 +1,23 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "Rafael Carvalho Ramos",
+                "Email": "rafaelramosmacae@gmail.com"
+            }
+        ],
+        "Category": "Windows and Tasks",
+        "Description": "Thin strip at the end of the taskbar that shows the desktop",
+        "Icon": "user-desktop",
+        "Id": "org.kde.onze.showdesktop",
+        "License": "GPL-3.0-or-later",
+        "Name": "Show Desktop (Onze)",
+        "Version": "1.3",
+        "FormFactors": [
+            "desktop"
+        ],
+        "Copyright": "© 2026 Projeto Onze — Rafael Carvalho Ramos"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0"
+}

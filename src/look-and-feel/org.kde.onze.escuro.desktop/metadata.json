@@ -1,0 +1,21 @@
+{
+    "KPackageStructure": "Plasma/LookAndFeel",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "Rafael Carvalho Ramos",
+                "Email": "rafaelramosmacae@gmail.com"
+            }
+        ],
+        "Category": "",
+        "Description": "Windows 11 inspired global theme (dark): centered taskbar, rounded corners and Fluent colors",
+        "Id": "org.kde.onze.escuro.desktop",
+        "License": "GPL-3.0-or-later",
+        "Name": "Onze Dark",
+        "Version": "1.3",
+        "Copyright": "© 2026 Projeto Onze — Rafael Carvalho Ramos"
+    },
+    "Keywords": "Desktop;Workspace;Appearance;Look and Feel;Windows 11;Fluent;Onze",
+    "X-Plasma-APIVersion": "2",
+    "X-Plasma-MainScript": "defaults"
+}

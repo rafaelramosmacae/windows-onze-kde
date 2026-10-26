@@ -1,0 +1,54 @@
+KIT DE PUBLICAÇÃO DO ONZE — como usar
+=====================================
+
+Conteúdo
+--------
+  store-info.txt           Todos os campos do cadastro na loja: nome, categoria, resumo, tags,
+                           licença, ordem das imagens e os arquivos para enviar (com SHA-256).
+  text/description.bbcode  Descrição em inglês, pronta para colar (BBCode).
+  text/description-pt_BR.bbcode   A mesma descrição em português.
+  text/changelog.txt       Histórico de versões para o campo "Changelog".
+  logo/                    Logo (quadrado com fundo azul e versão transparente) e um banner.
+  screenshots/original/    Capturas de tela da edição original (área de trabalho, menu Iniciar e
+                           aplicativos, claro e escuro) e 08-onze-icons.png, a vitrine dos ícones.
+                           09 a 11: as mesmas telas com claro e escuro juntos (para a galeria
+                           de 5 imagens do OpenDesktop; a ordem sugerida está em store-info.txt).
+  take-screenshots.sh      Script que tira todas as capturas automaticamente na VM.
+  SHA256SUMS               Checksum do pacote do tema.
+
+Capturas novas (opcional)
+-------------------------
+As capturas já estão em screenshots/original/. Para refazê-las, use o script
+take-screenshots.sh:
+
+As imagens da loja precisam mostrar o tema rodando de verdade no Plasma 6. O script
+take-screenshots.sh faz isso sozinho na sua VM com o Kubuntu 26.04:
+
+  1. Instale o tema na VM (de preferência a edição original, onze-theme-1.3).
+     Para que os menus apareçam em inglês nas capturas, você pode mudar o idioma da VM
+     para English em Configurações do sistema › Região e idioma e sair/entrar na sessão
+     (opcional; o instalador e o README aparecem em inglês de qualquer forma).
+  2. (Opcional) Instale o fastfetch para a captura do terminal:
+       sudo apt install fastfetch
+  3. Extraia este kit e o pacote do tema, e rode:
+       ./take-screenshots.sh /caminho/para/onze-theme-1.3
+  4. Não mexa no mouse nem no teclado durante uns 2 minutos. O script:
+       - minimiza as janelas abertas;
+       - aplica o tema claro: captura o instalador (opções 1-1-1: claro, centro, inglês;
+         ele para antes de mudar qualquer coisa), a área de trabalho limpa e o menu Iniciar;
+       - abre o Dolphin na pasta pessoal, o Konsole com o fastfetch e o Kate com o README,
+         organiza as janelas e captura;
+       - aplica o tema escuro e repete as capturas;
+       - fecha o que abriu e volta ao tema que você estava usando.
+  5. As imagens ficam em screenshots/original/ (ou screenshots/win11icons/).
+     Se alguma não ficar boa, rode de novo, ou use --manual para arrumar as janelas
+     antes de cada captura (o script espera você apertar Enter).
+
+Para publicar (store.kde.org / OpenDesktop)
+-------------------------------------------
+  - Crie o produto em "Plasma 6 Global Themes" e preencha os campos com store-info.txt.
+  - Cole text/description.bbcode na descrição e text/changelog.txt no changelog.
+  - Use logo/onze-logo-tile-512.png como logo; envie o banner e as capturas na galeria.
+  - Envie o pacote onze-theme-1.3.tar.gz na aba de arquivos, com uma descrição curta.
+  - Importante: a instalação é pelo install.sh. O botão "Instalar" da loja/"Obter novos
+    temas globais" não roda o script; a descrição já explica isso aos usuários.

@@ -1,0 +1,17 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "Rafael Carvalho Ramos",
+                "Email": "rafaelramosmacae@gmail.com"
+            }
+        ],
+        "Copyright": "© 2026 Projeto Onze — Rafael Carvalho Ramos",
+        "Description": "Windows 11 style window decoration (dark)",
+        "Id": "Onze-Escuro",
+        "License": "GPL-3.0-or-later",
+        "Name": "Onze Dark",
+        "Version": "1.3"
+    },
+    "KPackageStructure": "KWin/Decoration"
+}

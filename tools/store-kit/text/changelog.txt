@@ -1,0 +1,24 @@
+1.3
+- New original icon theme: Onze Icons
+- Onze Icons: own icons for Sleep, Restart, Shut Down, Lock, Log Out and Switch User in the Start menu; tray, battery and System Settings icons use Breeze where Onze has no drawing
+- New wallpaper, light and dark versions, 16:9 and 16:10, up to 3840 px
+- Home folder and Trash icons on the desktop, arranged in columns (--no-desktop-shortcuts to skip)
+- Installer asks for the Start button position (center or left) and the widgets' language (English or Brazilian Portuguese)
+- Start button keeps the same logo at any taskbar height
+- Scrollbar arrow buttons at both ends (--no-scroll-arrows to disable)
+- Desktop icons one level smaller (48 px, --desktop-icons to change)
+- Cursors 15% smaller
+- Fully offline installation (everything is included in the package)
+- README and scripts in English; themes shown as "Onze Light" and "Onze Dark"
+
+1.2
+- The installer asks whether you want the light or dark variant
+
+1.1
+- Original cursors with a thin outline
+- 40 px taskbar (--height to change it)
+- Smaller clock font
+- New wallpaper
+
+1.0
+- First release

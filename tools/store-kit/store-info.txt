@@ -1,0 +1,60 @@
+ONZE — STORE LISTING FIELDS (store.kde.org / OpenDesktop / Pling)
+====================================================================
+
+Product name
+  Windows Onze
+  (keep the "not affiliated with or endorsed by Microsoft" line at the end of the
+   description visible: "Windows" is a Microsoft trademark)
+
+Category
+  Plasma 6 Global Themes   (store.kde.org › Global Themes › Plasma 6)
+
+Version
+  @VERSION@
+
+License
+  GPL-3.0-or-later  (wallpaper: CC0 1.0)
+
+Summary (short description, one line)
+  Complete Windows 11 style theme for KDE Plasma 6: centered taskbar, Fluent colors, light & dark, original icons and cursors.
+
+Tags (the store accepts up to 5)
+  windows11, kde, plasma6, global-theme, kubuntu
+
+Description
+  text/description.bbcode          (English — main description)
+  text/description-pt_BR.bbcode    (Portuguese — optional, e.g. for a translated page or comments)
+
+Changelog
+  text/changelog.txt
+
+Logo (product image)
+  logo/onze-logo-tile-512.png      (recommended: square, works on light and dark pages)
+  logo/onze-logo-512.png           (transparent mark)
+
+Banner / first gallery image
+  logo/onze-banner-1920x1080.png   (artwork, not a screenshot)
+
+Screenshots (gallery, in this order) — captured in Kubuntu 26.04 / Plasma 6.6, original edition
+  screenshots/original/02-desktop-light.png
+  screenshots/original/03-desktop-dark.png
+  screenshots/original/04-start-menu-light.png
+  screenshots/original/05-start-menu-dark.png
+  screenshots/original/06-apps-light.png
+  screenshots/original/07-apps-dark.png
+  screenshots/original/08-onze-icons.png     (showcase of the original Onze Icons)
+  (01-installer.png is optional; take-screenshots.sh can capture it — see LEIA-ME.txt)
+
+  Gallery limited to 5 images (OpenDesktop): use the light + dark versions side by side
+  screenshots/original/09-desktop-light-dark.png
+  screenshots/original/10-start-menu-light-dark.png
+  screenshots/original/11-apps-light-dark.png
+  screenshots/original/08-onze-icons.png
+  logo/onze-banner-1920x1080.png
+
+Files to upload
+  @FILES@
+
+Source / links (optional)
+  E-mail: rafaelramosmacae@gmail.com
+  Source code: https://github.com/rafaelramosmacae/windows-onze-kde

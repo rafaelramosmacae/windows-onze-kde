@@ -1,0 +1,23 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "Rafael Carvalho Ramos",
+                "Email": "rafaelramosmacae@gmail.com"
+            }
+        ],
+        "Category": "Utilities",
+        "Description": "Windows 11 style search box that opens KRunner",
+        "Icon": "search",
+        "Id": "org.kde.onze.search",
+        "License": "GPL-3.0-or-later",
+        "Name": "Search (Onze)",
+        "Version": "1.3",
+        "FormFactors": [
+            "desktop"
+        ],
+        "Copyright": "© 2026 Projeto Onze — Rafael Carvalho Ramos"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0"
+}
