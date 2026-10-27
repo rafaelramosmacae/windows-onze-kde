@@ -28,7 +28,7 @@
 # =============================================================================
 set -Eeuo pipefail
 
-VERSION="1.3"
+VERSION="1.4"
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 SRC="$DIR/src"
 
@@ -617,7 +617,8 @@ if [[ $APPLY -eq 1 ]]; then
     kw "${G[@]}" --key theme "__aurorae__svg__$DECO"
     kw "${G[@]}" --key ButtonsOnLeft ""
     kw "${G[@]}" --key ButtonsOnRight "IAX"
-    kw "${G[@]}" --key BorderSize "None"
+    # "Normal" border size: Aurorae uses the theme's 4 px frame (rounded bottom corners)
+    kw "${G[@]}" --key BorderSize "Normal"
     kw "${G[@]}" --key BorderSizeAuto false
     kw --file kwinrc --group WindowSwitcher --key LayoutName thumbnail_grid
 

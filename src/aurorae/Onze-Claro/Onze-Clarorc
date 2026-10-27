@@ -8,9 +8,9 @@ Shadow=true
 UseTextShadow=false
 
 [Layout]
-BorderLeft=1
-BorderRight=1
-BorderBottom=1
+BorderLeft=4
+BorderRight=4
+BorderBottom=4
 TitleEdgeTop=1
 TitleEdgeBottom=0
 TitleEdgeLeft=1

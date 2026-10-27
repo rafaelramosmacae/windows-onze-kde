@@ -4,7 +4,7 @@
 #
 #  Run it inside Kubuntu / KDE Plasma 6 with the Onze theme already installed:
 #
-#      ./take-screenshots.sh /path/to/onze-theme-1.3
+#      ./take-screenshots.sh /path/to/onze-theme-1.4
 #
 #  (the argument is the extracted package folder: it is used for the installer
 #  screenshot and to open its README.md in Kate)
@@ -37,7 +37,7 @@ for a in "$@"; do
     esac
 done
 [[ -n "$PKG" && -f "$PKG/install.sh" && -f "$PKG/README.md" ]] ||
-    { echo "Usage: $0 /path/to/onze-theme-1.3   (the extracted package folder)" >&2; exit 1; }
+    { echo "Usage: $0 /path/to/onze-theme-1.4   (the extracted package folder)" >&2; exit 1; }
 PKG="$(cd "$PKG" && pwd)"
 
 has() { command -v "$1" >/dev/null 2>&1; }

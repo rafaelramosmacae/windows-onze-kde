@@ -33,7 +33,7 @@ from shapely.ops import unary_union
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Authorship and version used in every generated metadata file
-VERSION = "1.3"
+VERSION = "1.4"
 AUTHOR = {"Name": "Rafael Carvalho Ramos", "Email": "rafaelramosmacae@gmail.com"}
 COPYRIGHT = "© 2026 Projeto Onze — Rafael Carvalho Ramos"
 SRC = os.path.join(ROOT, "src")
@@ -511,7 +511,7 @@ def desktoptheme():
 # ---------------------------------------------------------------------------
 # 5. Decoração de janelas (Aurorae)
 # ---------------------------------------------------------------------------
-AUR = dict(PL=26, PR=26, PT=20, PB=32, R=8, TITLE=32, BW=46, BH=31)
+AUR = dict(PL=26, PR=26, PT=20, PB=32, R=8, TITLE=32, BW=46, BH=31, FRAME=4)
 
 
 def aurorae(variant):
@@ -537,7 +537,9 @@ def aurorae(variant):
     x0, y0 = P["PL"], P["PT"]
     x1, y1 = x0 + ww, y0 + wh
     R = P["R"]
-    corners = (1, 1, 0, 0)
+    # all four corners rounded: the 4 px frame (BorderLeft/Right/Bottom) is wide enough for the
+    # square corners of the window contents to sit inside the 8 px curve
+    corners = (1, 1, 1, 1)
     outer = rrect(x0, y0, x1, y1, R, corners)
     inner = rrect(x0 + 1, y0 + 1, x1 - 1, y1 - 1, R - 1, corners)
     border = outer.difference(inner)
@@ -632,7 +634,7 @@ def aurorae(variant):
         "TitleAlignment=Left", "TitleVerticalAlignment=Center",
         "Animation=120", "Shadow=true", "UseTextShadow=false", "",
         "[Layout]",
-        "BorderLeft=1", "BorderRight=1", "BorderBottom=1",
+        f"BorderLeft={P['FRAME']}", f"BorderRight={P['FRAME']}", f"BorderBottom={P['FRAME']}",
         "TitleEdgeTop=1", "TitleEdgeBottom=0", "TitleEdgeLeft=1", "TitleEdgeRight=1",
         "TitleEdgeTopMaximized=0", "TitleEdgeBottomMaximized=0",
         "TitleEdgeLeftMaximized=0", "TitleEdgeRightMaximized=0",

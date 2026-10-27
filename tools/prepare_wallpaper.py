@@ -188,7 +188,7 @@ def main():
         json.dump({"KPlugin": {"Authors": [{"Name": "Rafael Carvalho Ramos",
                                             "Email": "rafaelramosmacae@gmail.com"}],
                                "Copyright": "© 2026 Projeto Onze — Rafael Carvalho Ramos",
-                               "Id": "Onze", "License": "CC0-1.0", "Name": "Onze", "Version": "1.3"},
+                               "Id": "Onze", "License": "CC0-1.0", "Name": "Onze", "Version": "1.4"},
                    "KPackageStructure": "Wallpaper/Images"}, f, indent=4)
         f.write("\n")
     print("Wallpaper package written to", OUT)

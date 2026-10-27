@@ -11,7 +11,7 @@
         "Id": "Onze-Escuro",
         "License": "GPL-3.0-or-later",
         "Name": "Onze Dark",
-        "Version": "1.3"
+        "Version": "1.4"
     },
     "KPackageStructure": "KWin/Decoration"
 }

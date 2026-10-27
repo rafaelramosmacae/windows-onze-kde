@@ -10,13 +10,13 @@ icons — installed for your user only, with a script that can undo everything.
 
 ## Download
 
-Get `onze-theme-1.3.tar.gz` from the [**latest release**](../../releases/latest).
+Get `onze-theme-1.4.tar.gz` from the [**latest release**](../../releases/latest).
 
 ## Installation
 
 ```bash
-tar xzf onze-theme-1.3.tar.gz
-cd onze-theme-1.3
+tar xzf onze-theme-1.4.tar.gz
+cd onze-theme-1.4
 ./install.sh                       # asks: light or dark? center or left? language?
 ./install.sh --dark --start left   # answers questions up front
 ```

@@ -24,14 +24,14 @@ take-screenshots.sh:
 As imagens da loja precisam mostrar o tema rodando de verdade no Plasma 6. O script
 take-screenshots.sh faz isso sozinho na sua VM com o Kubuntu 26.04:
 
-  1. Instale o tema na VM (de preferência a edição original, onze-theme-1.3).
+  1. Instale o tema na VM (de preferência a edição original, onze-theme-1.4).
      Para que os menus apareçam em inglês nas capturas, você pode mudar o idioma da VM
      para English em Configurações do sistema › Região e idioma e sair/entrar na sessão
      (opcional; o instalador e o README aparecem em inglês de qualquer forma).
   2. (Opcional) Instale o fastfetch para a captura do terminal:
        sudo apt install fastfetch
   3. Extraia este kit e o pacote do tema, e rode:
-       ./take-screenshots.sh /caminho/para/onze-theme-1.3
+       ./take-screenshots.sh /caminho/para/onze-theme-1.4
   4. Não mexa no mouse nem no teclado durante uns 2 minutos. O script:
        - minimiza as janelas abertas;
        - aplica o tema claro: captura o instalador (opções 1-1-1: claro, centro, inglês;
@@ -49,6 +49,6 @@ Para publicar (store.kde.org / OpenDesktop)
   - Crie o produto em "Plasma 6 Global Themes" e preencha os campos com store-info.txt.
   - Cole text/description.bbcode na descrição e text/changelog.txt no changelog.
   - Use logo/onze-logo-tile-512.png como logo; envie o banner e as capturas na galeria.
-  - Envie o pacote onze-theme-1.3.tar.gz na aba de arquivos, com uma descrição curta.
+  - Envie o pacote onze-theme-1.4.tar.gz na aba de arquivos, com uma descrição curta.
   - Importante: a instalação é pelo install.sh. O botão "Instalar" da loja/"Obter novos
     temas globais" não roda o script; a descrição já explica isso aos usuários.

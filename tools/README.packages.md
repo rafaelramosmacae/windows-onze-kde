@@ -13,8 +13,8 @@ original artwork).
 ## Installation
 
 ```bash
-tar xzf onze-theme-1.3.tar.gz
-cd onze-theme-1.3
+tar xzf onze-theme-1.4.tar.gz
+cd onze-theme-1.4
 ./install.sh                       # asks: light or dark? center or left? language?
 ./install.sh --dark --start left   # answers questions up front
 ```
@@ -84,9 +84,13 @@ active color scheme, so a single style serves both light and dark.
 
 **Window decoration** — 32 px title bar in the window color, left-aligned title,
 46 × 31 px buttons with thin glyphs (minimize, maximize, restore, close), a red
-`#C42B1C` "close" on hover with a rounded top-right corner, 8 px top corners and
-a large shadow. Border size is set to **None**, so you resize windows from the
-invisible area around them, as in Windows.
+`#C42B1C` "close" on hover with a rounded top-right corner, 8 px corners at the
+top **and at the bottom**, and a large shadow. The sides and bottom have a 4 px
+frame in the window color (border size **Normal**): it is what lets the bottom
+corners be rounded, since KWin does not round the contents of windows drawn by
+an Aurorae theme. Where an app paints a different color right up to the edge
+(e.g. a terminal), the frame shows as a thin band. Maximized windows have no
+frame. You resize windows from the frame or from the invisible area around it.
 
 **Taskbar** — `[ Start | Search | Task View | pinned apps ]` in the center
 (or on the left, Windows 10 style, if you choose so during installation);
@@ -190,9 +194,12 @@ The package is built from the source folder with `tools/build-packages.sh`.
 
 ## Known limitations
 
-- **Bottom window corners**: KWin does not round window contents, so only the
-  title bar corners are rounded. To round all of them, install the community
-  effect [KDE-Rounded-Corners](https://github.com/matinlotfali/KDE-Rounded-Corners).
+- **Rounded bottom corners**: they come from the 4 px window frame, not from
+  rounding the app itself, so the app's own corner stays square inside the
+  curve. It is only noticeable where the app paints a dark color up to the edge
+  (e.g. Konsole with the light theme). The community effect
+  [KDE-Rounded-Corners](https://github.com/matinlotfali/KDE-Rounded-Corners)
+  rounds the window contents too, at some GPU cost.
 - **Application style**: controls inside apps keep the Breeze style (with the
   Onze colors). For Fluent-style controls, see Kvantum with the
   [Fluent-kde](https://github.com/vinceliuice/Fluent-kde) theme.
@@ -206,7 +213,7 @@ The package is built from the source folder with `tools/build-packages.sh`.
 
 ## Credits
 
-**Onze theme**, version 1.3 — a **Projeto Onze** project, created by
+**Onze theme**, version 1.4 — a **Projeto Onze** project, created by
 **Rafael Carvalho Ramos**
 ([rafaelramosmacae@gmail.com](mailto:rafaelramosmacae@gmail.com)):
 color schemes, Plasma style, window decorations, layout, plasmoids, splash
@@ -232,6 +239,8 @@ affiliated with or endorsed by Microsoft.
 
 ## Changelog
 
+- **1.4** — Windows with rounded bottom corners: 4 px frame in the window
+  color around the sides and bottom (border size "Normal").
 - **1.3** — New original **Onze Icons** icon theme.
   New wallpaper by the author, in light and dark versions, 16:9 and 16:10, up to 3840 px.
   Widgets in English or Portuguese (`--lang`, asked during installation).

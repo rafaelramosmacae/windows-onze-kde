@@ -26,7 +26,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "src", "icons")
 LIGHT = os.path.join(OUT, "OnzeIcons")
 DARK = os.path.join(OUT, "OnzeIcons-Dark")
-VERSION = "1.3"
+VERSION = "1.4"
 FONT = "/usr/share/fonts/opentype/inter/Inter-Bold.otf"
 
 # --------------------------------------------------------------------------------

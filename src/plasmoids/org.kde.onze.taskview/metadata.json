@@ -13,7 +13,7 @@
         "Id": "org.kde.onze.taskview",
         "License": "GPL-3.0-or-later",
         "Name": "Task View (Onze)",
-        "Version": "1.3",
+        "Version": "1.4",
         "FormFactors": [
             "desktop"
         ],

@@ -24,7 +24,7 @@ library=org.kde.kwin.aurorae
 theme=__aurorae__svg__Onze-Escuro
 ButtonsOnLeft=
 ButtonsOnRight=IAX
-BorderSize=None
+BorderSize=Normal
 BorderSizeAuto=false
 
 [ksplashrc][KSplash]
