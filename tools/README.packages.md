@@ -108,7 +108,8 @@ installer adds two standard KDE shortcuts to your Desktop folder (found with
 your Home folder (with the Dolphin file manager icon, a yellow folder with a
 blue band) and the Trash, whose icon switches between empty and full by
 itself. Their names follow the system language ("Pasta pessoal" and
-"Lixeira" in Brazilian Portuguese). Existing files are never overwritten, and
+"Lixeira" in Brazilian Portuguese). Home comes first, then Trash; new files
+go after them. Existing files are never overwritten, and
 the uninstaller removes only the shortcuts Onze created. Use
 `--no-desktop-shortcuts` to skip them.
 
@@ -240,7 +241,11 @@ affiliated with or endorsed by Microsoft.
 ## Changelog
 
 - **1.4** — Windows with rounded bottom corners: 4 px frame in the window
-  color around the sides and bottom (border size "Normal").
+  color around the sides and bottom (border size "Normal"). Desktop: Home
+  folder above Trash in every language (icons sorted by date, folders not
+  forced first).
+  Onze Icons: monochrome "Favorites" icon in the Start menu, like the other
+  icons in its sidebar.
 - **1.3** — New original **Onze Icons** icon theme.
   New wallpaper by the author, in light and dark versions, 16:9 and 16:10, up to 3840 px.
   Widgets in English or Portuguese (`--lang`, asked during installation).

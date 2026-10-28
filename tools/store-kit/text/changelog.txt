@@ -1,5 +1,7 @@
 1.4
 - Windows with rounded bottom corners (4 px frame in the window color)
+- Desktop: Home folder above Trash in every language
+- Onze Icons: monochrome "Favorites" icon in the Start menu
 
 1.3
 - New original icon theme: Onze Icons

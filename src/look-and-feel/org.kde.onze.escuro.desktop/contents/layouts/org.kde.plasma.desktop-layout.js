@@ -27,7 +27,10 @@ for (var j = 0; j < desktopsArray.length; j++) {
     desktopsArray[j].writeConfig("iconSize", desktopIconSize);
     // icons in columns, top to bottom, ordered by date (Home, then Trash), as in Windows
     desktopsArray[j].writeConfig("arrangement", 1);
-    desktopsArray[j].writeConfig("sortMode", 4);
+    // sortMode is a KDirModel column: 2 = date. Folders-first is off: Plasma sees trash:/ as a
+    // folder at once but the Home link only later, which would put Trash first.
+    desktopsArray[j].writeConfig("sortMode", 2);
+    desktopsArray[j].writeConfig("sortDirsFirst", false);
 }
 
 // --- Barra de tarefas -------------------------------------------------------------

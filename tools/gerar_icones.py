@@ -454,6 +454,9 @@ def session_icon(kind, color):
               "M15.4,4.6A3,3 0 0 1 15.4,10.4", "M17.6,13.9C19.6,14.6 21,16.6 21,19.5"]
     elif kind == "save-session":     # bookmark ribbon with a check
         s += ["M6.5,3.5H17.5V20.5L12,16.6L6.5,20.5Z", "M9.2,9.6L11.2,11.6L14.9,7.9"]
+    elif kind == "favorites":        # five-pointed star outline
+        s += ["M12,3.9L14.2,9.57L20.27,9.91L15.57,13.76L17.11,19.64L12,16.35L6.89,19.64L8.43,13.76"
+              "L3.73,9.91L9.8,9.57Z"]
     body = "".join(f'<path class="ColorScheme-Text" d="{d}" fill="none" stroke="currentColor" stroke-width="1.6" '
                    f'stroke-linecap="round" stroke-linejoin="round"/>' for d in s)
     body += "".join(f'<path class="ColorScheme-Text" d="{d}" fill="currentColor"/>' for d in f)
@@ -470,6 +473,14 @@ SESSION_ICONS = {  # kind: names (each also gets a "-symbolic" twin)
     "lock-screen": ["system-lock-screen"],
     "switch-user": ["system-switch-user"],
     "save-session": ["system-save-session"],
+}
+
+# Monochrome glyphs for names that Plasma shows next to other monochrome icons, drawn like the
+# session icons. "bookmarks" is the "Favorites" entry of the Start menu (Kickoff); the colored
+# star tile stays available as "favorites" / "user-bookmarks". No "-symbolic" twins here: those
+# names keep pointing to Breeze.
+MENU_ICONS = {  # kind: names
+    "favorites": ["bookmarks"],
 }
 
 
@@ -963,7 +974,7 @@ def build():
     put(P, "network-server", network_place("server"))
     put(P, "start-here", start_here(), "start-here-kde", "start-here-kde-plasma", "start-here-kubuntu",
         "distributor-logo", "start-here-branding")
-    put(P, "bookmarks", category("orange", "star"), "favorites", "user-bookmarks")
+    put(P, "favorites", category("orange", "star"), "user-bookmarks")
 
     M = "mimetypes"
     put(M, "text-x-generic", mime_glyph(draw_text), "text-plain", "text-x-log", "application-x-zerosize",
@@ -1277,7 +1288,12 @@ def write_theme():
                 f.write(session_icon(kind, SESSION_COLOR[variant]))
             for n in names[1:] + [x + "-symbolic" for x in names]:
                 os.symlink(names[0] + ".svg", os.path.join(out, n + ".svg"))
-    count += len(SESSION_ICONS)
+        for kind, names in MENU_ICONS.items():
+            with open(os.path.join(out, names[0] + ".svg"), "w") as f:
+                f.write(session_icon(kind, SESSION_COLOR[variant]))
+            for n in names[1:]:
+                os.symlink(names[0] + ".svg", os.path.join(out, n + ".svg"))
+    count += len(SESSION_ICONS) + len(MENU_ICONS)
 
     # every name Onze provides, with its context
     names_ctx = {}
@@ -1288,6 +1304,8 @@ def write_theme():
                                              "start-here-kde-plasma-symbolic")})
     for names in SESSION_ICONS.values():
         names_ctx.update({n: "actions" for n in names + [x + "-symbolic" for x in names]})
+    for names in MENU_ICONS.values():
+        names_ctx.update({n: "places" for n in names})   # same context as the old alias: breeze-links unchanged
 
     # Breeze icons that the shortened-name lookup would replace with an unrelated Onze icon
     # (battery levels, network states, System Settings pages...) are linked to the installed

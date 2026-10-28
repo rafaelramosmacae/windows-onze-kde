@@ -643,7 +643,11 @@ if [[ $APPLY -eq 1 ]]; then
         d.writeConfig('iconSize', ${ICON_LEVEL});
         if (${DESKTOP_SHORTCUTS} === 1) {
             d.writeConfig('arrangement', 1);   // columns, top to bottom (Windows style)
-            d.writeConfig('sortMode', 4);      // by date: Home, then Trash, then new files
+            // sortMode holds a KDirModel column: 2 = date (4 would be the file owner).
+            // Folders-first is off because Plasma reports trash:/ as a folder at once but
+            // the Home link only later, which would put Trash first.
+            d.writeConfig('sortMode', 2);      // by date: Home, then Trash, then new files
+            d.writeConfig('sortDirsFirst', false);
         }
         d.reloadConfig();
     });
